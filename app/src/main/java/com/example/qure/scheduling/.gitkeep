@@ -1,0 +1,2 @@
+// This folder contains the OS scheduling algorithm classes (for the simulator).
+// Example: FCFSScheduler.java, SJFScheduler.java, RoundRobinScheduler.java, etc.

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "345061867537",
+    "project_id": "qure-f1e5c",
+    "storage_bucket": "qure-f1e5c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345061867537:android:dc7d2c82c72dd92e5f31b0",
+        "android_client_info": {
+          "package_name": "com.example.qure"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwcj_0Cgc0IYPrWOsZpsSCyzLlL37VQCw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

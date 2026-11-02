@@ -1,0 +1,86 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- =====================================================
+         QURE App Theme
+         Based on Material3 with QURE colors applied.
+         NoActionBar = we use custom toolbars in each activity.
+         ===================================================== -->
+
+    <!-- Base theme - defines the color slots Material3 uses -->
+    <style name="Base.Theme.QURE" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary brand color: Dark Navy Blue -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorTextOnPrimary</item>
+
+        <!-- Secondary brand color: Teal -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorTextOnSecondary</item>
+
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorTextPrimary</item>
+        <item name="colorOnSurfaceVariant">#424242</item>
+
+        <!-- General Text Colors - Dark & High Contrast -->
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextSecondary</item>
+        <item name="android:textColorHint">#616161</item>
+        <item name="editTextColor">@color/colorTextPrimary</item>
+
+        <!-- Status bar color (top of screen) -->
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+
+        <!-- Window background -->
+        <item name="android:windowBackground">@color/colorBackground</item>
+
+        <!-- Default text input style -->
+        <item name="textInputStyle">@style/QURETextInputLayout</item>
+    </style>
+
+    <!-- Final theme used by the app (inherits from Base) -->
+    <style name="Theme.QURE" parent="Base.Theme.QURE" />
+
+    <!-- Style for text input fields to ensure high contrast borders and readable hints -->
+    <style name="QURETextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="boxStrokeWidth">1.5dp</item>
+        <item name="hintTextColor">@color/colorPrimary</item>
+        <item name="android:textColorHint">#616161</item>
+        <item name="startIconTint">@color/colorSecondary</item>
+        <item name="endIconTint">@color/colorPrimary</item>
+    </style>
+
+    <!-- =====================================================
+         Custom styles for reusable components
+         ===================================================== -->
+
+    <!-- Style for the main screen toolbar -->
+    <style name="QUREToolbarStyle" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+
+    <!-- Style for primary action buttons (Navy Blue) -->
+    <style name="QUREButtonPrimary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- Style for secondary action buttons (Teal) -->
+    <style name="QUREButtonSecondary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/colorSecondary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- Style for outlined buttons (used in secondary actions) -->
+    <style name="QUREButtonOutlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+</resources>

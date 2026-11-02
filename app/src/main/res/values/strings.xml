@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">QURE</string>
+    <string name="app_tagline">Smart Hospital Patient &amp; Queue Management System</string>
+
+    <!-- Welcome Screen -->
+    <string name="btn_get_started">GET STARTED</string>
+
+    <!-- Login Screen -->
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Sign in to continue</string>
+    <string name="hint_email">Email Address</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="text_no_account">Don\'t have an account?</string>
+    <string name="btn_register_here">Register Here</string>
+
+    <!-- Register Screen -->
+    <string name="register_title">Create Account</string>
+    <string name="register_subtitle">Join QURE today</string>
+    <string name="hint_full_name">Full Name</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="hint_select_role">Select Your Role</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="text_have_account">Already have an account?</string>
+    <string name="btn_login_here">Login Here</string>
+
+    <!-- User Roles -->
+    <string name="role_patient">Patient</string>
+    <string name="role_doctor">Doctor</string>
+    <string name="role_admin">Admin</string>
+
+    <!-- Dashboard -->
+    <string name="welcome_message">Welcome, %1$s!</string>
+    <string name="btn_logout">Logout</string>
+
+    <!-- Patient Dashboard -->
+    <string name="btn_book_appointment">Book Appointment</string>
+    <string name="btn_my_queue">My Queue Status</string>
+    <string name="btn_upload_report">Upload Medical Report</string>
+    <string name="btn_hospital_location">Hospital Location</string>
+    <string name="btn_profile">Profile</string>
+
+    <!-- Appointment -->
+    <string name="appointment_title">Book Appointment</string>
+    <string name="hint_department">Select Department</string>
+    <string name="hint_doctor">Select Doctor</string>
+    <string name="hint_date">Appointment Date</string>
+    <string name="hint_symptoms">Describe Your Symptoms</string>
+    <string name="btn_book">BOOK APPOINTMENT</string>
+
+    <!-- Queue Status -->
+    <string name="queue_status_title">Queue Status</string>
+    <string name="label_token">Token Number</string>
+    <string name="label_status">Status</string>
+    <string name="label_position">Queue Position</string>
+    <string name="label_ahead">Patients Ahead</string>
+    <string name="label_estimated_wait">Estimated Wait Time</string>
+    <string name="label_doctor">Doctor</string>
+    <string name="label_department">Department</string>
+    <string name="btn_check_in">CHECK IN</string>
+
+    <!-- Doctor Dashboard -->
+    <string name="doctor_dashboard_title">Doctor Dashboard</string>
+    <string name="label_current_patient">Current Patient</string>
+    <string name="label_next_patient">Next Patient</string>
+    <string name="btn_start_consultation">START CONSULTATION</string>
+    <string name="btn_complete_consultation">COMPLETE CONSULTATION</string>
+
+    <!-- Admin Dashboard -->
+    <string name="admin_dashboard_title">Admin Dashboard</string>
+    <string name="label_total_patients">Total Patients</string>
+    <string name="label_waiting">Waiting</string>
+    <string name="label_in_consultation">In Consultation</string>
+    <string name="label_completed">Completed</string>
+    <string name="label_emergency">Emergency</string>
+    <string name="btn_add_emergency">Add Emergency Patient</string>
+    <string name="btn_monitor_queue">Monitor Queue</string>
+    <string name="btn_doctor_queues">Doctor Queues</string>
+
+    <!-- Medical Reports -->
+    <string name="report_title">Medical Reports</string>
+    <string name="btn_upload_report_action">UPLOAD REPORT</string>
+    <string name="btn_take_photo">Take Photo</string>
+    <string name="btn_choose_file">Choose File</string>
+
+    <!-- Hospital Location -->
+    <string name="hospital_location_title">Hospital Location</string>
+    <string name="hospital_name">QURE General Hospital</string>
+    <string name="btn_open_maps">OPEN IN GOOGLE MAPS</string>
+
+    <!-- Error Messages -->
+    <string name="error_empty_fields">Please fill in all fields</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+    <string name="error_invalid_email">Please enter a valid email address</string>
+    <string name="error_weak_password">Password must be at least 6 characters</string>
+    <string name="error_login_failed">Login failed. Please check your credentials</string>
+    <string name="error_register_failed">Registration failed. Please try again</string>
+    <string name="error_network">Network error. Please check your connection</string>
+    <string name="error_unknown">Something went wrong. Please try again</string>
+
+    <!-- Success Messages -->
+    <string name="success_registered">Registration successful!</string>
+    <string name="success_login">Login successful!</string>
+    <string name="success_appointment">Appointment booked successfully!</string>
+    <string name="success_checkin">Check-in successful! You have joined the queue.</string>
+    <string name="success_report_uploaded">Report uploaded successfully!</string>
+    <string name="success_logout">Logged out successfully</string>
+
+    <!-- Status Labels -->
+    <string name="status_registered">Registered</string>
+    <string name="status_waiting">Waiting</string>
+    <string name="status_in_consultation">In Consultation</string>
+    <string name="status_completed">Completed</string>
+    <string name="status_emergency">Emergency</string>
+
+    <!-- General -->
+    <string name="loading">Loading…</string>
+    <string name="no_data">No data available</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="minutes_format">%1$d min</string>
+    <string name="position_format">#%1$d</string>
+</resources>

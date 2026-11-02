@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_book_appointment.xml — Appointment Booking Screen
+    ============================================================
+    Allows patients to select a department, doctor, date,
+    and describe their symptoms to book a new appointment.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- =====================================================
+             HEADER SECTION
+             ===================================================== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Book Appointment"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Fill in the details below"
+                android:textColor="@color/colorSecondaryLight"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- =====================================================
+             FORM SECTION
+             ===================================================== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Patient Name Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutPatientName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:hint="Patient Name"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxStrokeWidth="1.5dp"
+                app:hintTextColor="@color/colorPrimary"
+                android:textColorHint="#424242"
+                app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+                app:startIconTint="@color/colorSecondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editPatientName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="#424242"
+                    android:textSize="16sp"
+                    android:inputType="textPersonName|textCapWords"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Department Dropdown (Spinner) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutDepartment"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:hint="Select Department"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxStrokeWidth="1.5dp"
+                app:hintTextColor="@color/colorPrimary"
+                android:textColorHint="#424242"
+                app:startIconDrawable="@android:drawable/ic_menu_agenda"
+                app:startIconTint="@color/colorSecondary">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinnerDepartment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="#424242"
+                    android:textSize="16sp"
+                    android:inputType="none"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Doctor Dropdown (Spinner) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutDoctor"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:hint="Select Doctor"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxStrokeWidth="1.5dp"
+                app:hintTextColor="@color/colorPrimary"
+                android:textColorHint="#424242"
+                app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+                app:startIconTint="@color/colorSecondary">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinnerDoctor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="#424242"
+                    android:textSize="16sp"
+                    android:inputType="none"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Appointment Date Input (Clickable for Date Picker) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutDate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:hint="Appointment Date"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxStrokeWidth="1.5dp"
+                app:hintTextColor="@color/colorPrimary"
+                android:textColorHint="#424242"
+                app:startIconDrawable="@android:drawable/ic_menu_today"
+                app:startIconTint="@color/colorSecondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="#424242"
+                    android:textSize="16sp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="date" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Symptoms Input (Multiline) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutSymptoms"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:hint="Describe Your Symptoms"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxStrokeWidth="1.5dp"
+                app:hintTextColor="@color/colorPrimary"
+                android:textColorHint="#424242"
+                app:startIconDrawable="@android:drawable/ic_menu_edit"
+                app:startIconTint="@color/colorSecondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editSymptoms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="#424242"
+                    android:textSize="16sp"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:maxLines="5" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- BOOK APPOINTMENT Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonBookAppointment"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="BOOK APPOINTMENT"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/colorPrimary"
+                app:cornerRadius="10dp" />
+
+            <!-- Cancel Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonCancel"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:text="CANCEL"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

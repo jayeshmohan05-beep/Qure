@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- =====================================================
+         PERMISSIONS
+         ===================================================== -->
+
+    <!-- Internet access - REQUIRED for Firebase and Google Maps -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Location - for Google Maps and hospital location feature -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Camera - for taking photos to upload as medical reports -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Storage - for reading files to upload as medical reports -->
+    <!-- For Android 13+ (API 33+), use READ_MEDIA_IMAGES instead -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <!-- Post Notifications - for local notifications (API 33+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Hardware features (optional - won't block devices without camera) -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.QURE">
+
+        <!-- =====================================================
+             ACTIVITIES
+             We will register each activity here as we create them.
+             ===================================================== -->
+
+        <!-- MainActivity = WelcomeActivity (our splash/welcome screen) -->
+        <!-- This is the LAUNCHER activity - the app starts here -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- LoginActivity — shown after GET STARTED is tapped -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- RegisterActivity — shown when user taps "Register Here" -->
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- PatientDashboardActivity — shown after a Patient logs in -->
+        <activity
+            android:name=".activities.PatientDashboardActivity"
+            android:exported="false" />
+
+        <!-- DoctorDashboardActivity — shown after a Doctor logs in -->
+        <activity
+            android:name=".activities.DoctorDashboardActivity"
+            android:exported="false" />
+
+        <!-- AdminDashboardActivity — shown after an Admin logs in -->
+        <activity
+            android:name=".activities.AdminDashboardActivity"
+            android:exported="false" />
+
+        <!-- BookAppointmentActivity — where patients book new appointments -->
+        <activity
+            android:name=".activities.BookAppointmentActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- QueueStatusActivity — where patients check in and view status -->
+        <activity
+            android:name=".activities.QueueStatusActivity"
+            android:exported="false" />
+
+        <!-- AdminDoctorQueueActivity — Admin queue inspection and emergency management -->
+        <activity
+            android:name=".activities.AdminDoctorQueueActivity"
+            android:exported="false" />
+
+        <!-- MedicalReportsActivity — where patients upload and view reports -->
+        <activity
+            android:name=".activities.MedicalReportsActivity"
+            android:exported="false" />
+            
+        <!-- AllAppointmentsActivity — where Admin views global database -->
+        <activity
+            android:name=".activities.AllAppointmentsActivity"
+            android:exported="false" />
+
+        <!-- ProfileActivity — user profile, phone, and account deletion -->
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:exported="false" />
+
+        <!-- AdminManageUsersActivity — Admin authority to manage and delete accounts -->
+        <activity
+            android:name=".activities.AdminManageUsersActivity"
+            android:exported="false" />
+
+        <!-- HospitalLocationActivity — shows Google Maps integration -->
+        <activity
+            android:name=".activities.HospitalLocationActivity"
+            android:exported="false" />
+
+        <!-- =====================================================
+             GOOGLE MAPS API KEY
+             ===================================================== -->
+        <!-- Replace YOUR_API_KEY_HERE with an actual Google Cloud API key if you want the embedded map to render tiles! -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBbouhX0XrKvW6AIPUZSFOo0w8geIG-MoQ" />
+
+    </application>
+
+</manifest>

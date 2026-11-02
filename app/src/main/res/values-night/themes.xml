@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--
+        NIGHT MODE THEME
+        We keep the same high-contrast QURE light theme in dark mode.
+        This prevents dark mode from turning text white on white cards.
+    -->
+    <style name="Base.Theme.QURE" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorTextOnPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorTextOnSecondary</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorTextPrimary</item>
+        <item name="colorOnSurfaceVariant">#424242</item>
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextSecondary</item>
+        <item name="android:textColorHint">#616161</item>
+        <item name="editTextColor">@color/colorTextPrimary</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="textInputStyle">@style/QURETextInputLayout</item>
+    </style>
+
+    <style name="Theme.QURE" parent="Base.Theme.QURE" />
+</resources>

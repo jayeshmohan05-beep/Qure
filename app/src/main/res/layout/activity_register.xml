@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_register.xml — Register Screen Layout
+    ================================================
+    This screen lets new users create an account.
+    It contains:
+      - Full Name input
+      - Email input
+      - Password input (with show/hide toggle)
+      - Confirm Password input (with show/hide toggle)
+      - Role selection dropdown (Patient / Doctor / Admin)
+      - REGISTER button
+      - A link to go back to the Login screen
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- =====================================================
+             TOP SECTION — Branding
+             ===================================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="32dp"
+            android:paddingBottom="24dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="36dp"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="✚"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="QURE"
+                android:textColor="@color/colorPrimary"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- =====================================================
+             REGISTER CARD — The main form
+             ===================================================== -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorSurface"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- "Create Account" title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_title"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="@string/register_subtitle"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="14sp" />
+
+                <!-- Full Name Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="@string/hint_full_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:boxStrokeWidth="1.5dp"
+                    app:hintTextColor="@color/colorPrimary"
+                    android:textColorHint="#424242"
+                    app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+                    app:startIconTint="@color/colorSecondary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textColorHint="#424242"
+                        android:textSize="16sp"
+                        android:inputType="textPersonName|textCapWords"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Email Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="@string/hint_email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:boxStrokeWidth="1.5dp"
+                    app:hintTextColor="@color/colorPrimary"
+                    android:textColorHint="#424242"
+                    app:startIconDrawable="@android:drawable/ic_dialog_email"
+                    app:startIconTint="@color/colorSecondary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textColorHint="#424242"
+                        android:textSize="16sp"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Password Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="@string/hint_password"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:boxStrokeWidth="1.5dp"
+                    app:hintTextColor="@color/colorPrimary"
+                    android:textColorHint="#424242"
+                    app:startIconDrawable="@android:drawable/ic_lock_lock"
+                    app:startIconTint="@color/colorSecondary"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textColorHint="#424242"
+                        android:textSize="16sp"
+                        android:inputType="textPassword"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Confirm Password Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="@string/hint_confirm_password"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:boxStrokeWidth="1.5dp"
+                    app:hintTextColor="@color/colorPrimary"
+                    android:textColorHint="#424242"
+                    app:startIconDrawable="@android:drawable/ic_lock_lock"
+                    app:startIconTint="@color/colorSecondary"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textColorHint="#424242"
+                        android:textSize="16sp"
+                        android:inputType="textPassword"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- =====================================================
+                     ROLE SELECTION
+                     We use a TextInputLayout with ExposedDropdownMenu style.
+                     This gives a clean Material dropdown (spinner) look.
+                     ===================================================== -->
+
+                <!-- Label for role selection -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Select Your Role"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="13sp" />
+
+                <!-- The three role buttons side by side -->
+                <LinearLayout
+                    android:id="@+id/layoutRoleSelection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:orientation="horizontal">
+
+                    <!-- Patient Role Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonRolePatient"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:text="Patient"
+                        android:textSize="12sp"
+                        app:strokeColor="@color/colorPrimary"
+                        app:cornerRadius="8dp" />
+
+                    <!-- Doctor Role Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonRoleDoctor"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:text="Doctor"
+                        android:textSize="12sp"
+                        app:strokeColor="@color/colorPrimary"
+                        app:cornerRadius="8dp" />
+
+                    <!-- Admin Role Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonRoleAdmin"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:text="Admin"
+                        android:textSize="12sp"
+                        app:strokeColor="@color/colorPrimary"
+                        app:cornerRadius="8dp" />
+
+                </LinearLayout>
+
+                <!-- Shows which role is currently selected -->
+                <TextView
+                    android:id="@+id/textSelectedRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="No role selected"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="13sp"
+                    android:textStyle="italic" />
+
+                <!-- Doctor Department Selection (Visible only when Doctor role is chosen) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutDoctorDepartment"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:hint="Select Specialization / Department"
+                    android:visibility="gone"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:boxStrokeWidth="1.5dp"
+                    app:hintTextColor="@color/colorPrimary"
+                    android:textColorHint="#424242"
+                    app:startIconDrawable="@android:drawable/ic_menu_agenda"
+                    app:startIconTint="@color/colorSecondary">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinnerDoctorDepartment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textColorHint="#424242"
+                        android:textSize="16sp"
+                        android:inputType="none"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- REGISTER Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="@string/btn_register"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/colorSecondary"
+                    app:cornerRadius="10dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- =====================================================
+             BOTTOM — Link back to Login screen
+             ===================================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="24dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_have_account"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textGoToLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/btn_login_here"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

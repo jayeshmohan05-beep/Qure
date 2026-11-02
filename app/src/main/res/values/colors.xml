@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- =====================================================
+         QURE Color Palette
+         Primary   : Dark Navy Blue  → used for headers, buttons, main UI
+         Secondary : Teal            → used for accents, icons, highlights
+         Background: White / Light Gray
+         ===================================================== -->
+
+    <!-- Primary Colors -->
+    <color name="colorPrimary">#1A237E</color>        <!-- Dark Navy Blue -->
+    <color name="colorPrimaryDark">#0D1B6E</color>    <!-- Darker Navy (status bar) -->
+    <color name="colorPrimaryLight">#283593</color>   <!-- Slightly lighter navy -->
+
+    <!-- Secondary / Accent Colors -->
+    <color name="colorSecondary">#00897B</color>      <!-- Teal -->
+    <color name="colorSecondaryDark">#00695C</color>  <!-- Dark Teal -->
+    <color name="colorSecondaryLight">#4DB6AC</color> <!-- Light Teal -->
+    <color name="colorAccent">#00BCD4</color>         <!-- Cyan accent -->
+
+    <!-- Background Colors -->
+    <color name="colorBackground">#F5F5F5</color>     <!-- Very light gray background -->
+    <color name="colorSurface">#FFFFFF</color>        <!-- White surface for cards -->
+
+    <!-- Text Colors -->
+    <color name="colorTextPrimary">#212121</color>    <!-- Near black for main text -->
+    <color name="colorTextSecondary">#757575</color>  <!-- Gray for secondary text -->
+    <color name="colorTextOnPrimary">#FFFFFF</color>  <!-- White text on navy background -->
+    <color name="colorTextOnSecondary">#FFFFFF</color><!-- White text on teal background -->
+
+    <!-- Status / Priority Colors (used in queue management) -->
+    <color name="colorStatusRegistered">#9E9E9E</color>    <!-- Gray - Registered -->
+    <color name="colorStatusWaiting">#FF9800</color>       <!-- Orange - Waiting -->
+    <color name="colorStatusConsultation">#2196F3</color>  <!-- Blue - In Consultation -->
+    <color name="colorStatusCompleted">#4CAF50</color>     <!-- Green - Completed -->
+    <color name="colorStatusEmergency">#F44336</color>     <!-- Red - Emergency -->
+
+    <!-- Priority Colors (for the OS scheduling module) -->
+    <color name="colorPriority1">#F44336</color>   <!-- Emergency - Red -->
+    <color name="colorPriority2">#FF5722</color>   <!-- Critical - Deep Orange -->
+    <color name="colorPriority3">#FF9800</color>   <!-- Urgent - Orange -->
+    <color name="colorPriority4">#4CAF50</color>   <!-- Normal - Green -->
+
+    <!-- Basic -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Divider / Border -->
+    <color name="colorDivider">#E0E0E0</color>
+    <color name="colorCardBorder">#BDBDBD</color>
+</resources>

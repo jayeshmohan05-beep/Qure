@@ -1,0 +1,2 @@
+// This folder contains the hospital queue management logic.
+// Example: QueueManager.java (Priority + FCFS scheduling for the real hospital queue)
